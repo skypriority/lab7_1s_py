@@ -44,8 +44,6 @@ def solve_quadratic(a: float, b: float, c: float) -> Optional[Tuple[float, ...]]
     logging.info("Два корня: %s, %s", root1, root2)
     return root1, root2
 
-
-# Пример применения декоратора logger к другой функции для сравнения:
 @logger(handle=sys.stdout)
 def divide(a: float, b: float) -> float:
     """Простая функция для демонстрации декоратора logger."""
@@ -53,19 +51,19 @@ def divide(a: float, b: float) -> float:
 
 
 if __name__ == "__main__":
-    solve_quadratic(1, -3, 2)      # INFO: два корня
-    solve_quadratic(1, 1, 1)       # WARNING: d < 0
+    solve_quadratic(1, -3, 2)
+    solve_quadratic(1, 1, 1)
     try:
-        solve_quadratic("x", 1, 1)  # CRITICAL
+        solve_quadratic("x", 1, 1)
     except TypeError:
         pass
     try:
-        solve_quadratic(0, 0, 5)    # CRITICAL
+        solve_quadratic(0, 0, 5)
     except ValueError:
         pass
 
     divide(10, 2)
     try:
-        divide(10, 0)               # ERROR через декоратор
+        divide(10, 0)
     except ZeroDivisionError:
         pass
