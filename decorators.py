@@ -57,7 +57,7 @@ def logger(
         )
         try:
             result = func(*args, **kwargs)
-        except Exception as exc:  # noqa: BLE001 - логируем и пробрасываем
+        except Exception as exc:
             level = _resolve_level(exc)
             _write(
                 level,
