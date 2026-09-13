@@ -24,7 +24,6 @@
 ├── currencies.py          # Бизнес-логика get_currencies (без логирования)
 ├── quadratic_demo.py      # Демонстрация уровней логирования
 ├── test_currencies.py     # Тесты (unittest)
-├── requirements.txt
 └── README.md
 
 ````
